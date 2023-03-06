@@ -1,9 +1,8 @@
 const mongoose = require('mongoose')
 
-const uri = "mongodb+srv://admin:admin@cluster0.7lzev9q.mongodb.net/test?retryWrites=true&w=majority";
 mongoose.set('strictQuery', false);
 
-mongoose.connect(uri , {
+mongoose.connect(process.env.URI , {
     useNewUrlParser : true,
     useUnifiedTopology : true
 
